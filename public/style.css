@@ -4,7 +4,6 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-   /* background-color: #a8d0e6;  */
   background-color: #36393F;
   height: 100vh;
   display: flex;
@@ -14,7 +13,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 500px; /* Definindo um tamanho máximo para o container */
+  max-width: 500px;
 }
 
 form {
@@ -30,11 +29,9 @@ form {
 
 button, select, input {
   margin: 10px 0;
-  border-radius: 5px; /* cantos arredondados */
+  border-radius: 5px;
   padding: 10px;
 }
-
-
 
 button {
   width: 100%;
@@ -42,10 +39,9 @@ button {
   border: none;
   color: #fff;
   cursor: pointer;
-  transition: opacity 0.3s; /* Uma transição suave para o hover */
+  transition: opacity 0.3s;
   background-color: #4b9847;
 }
-
 
 .logout {
   background: rgb(56, 3, 3);
@@ -57,14 +53,8 @@ button:hover {
   opacity: 0.8;
 }
 
-select {
+select, input {
   width: 100%;
-  border: 1px solid #ddd;
-  outline: none;
-}
-
-input {
-  width: 95%;
   border: 1px solid #ddd;
   outline: none;
 }
@@ -75,24 +65,21 @@ input {
   flex-direction: column;
   margin-top: 18px;
 }
-h1 {
+
+h1, h3 {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
   color: #333;
   font-size: 2rem;
-  margin-bottom: 20px;
 }
 
 h3 {
-  text-align: center;
   color: #454444;
   font-size: 1rem;
-  margin-bottom: 20px;
 }
-
-
-
-
-/* chat */
 
 .chat-container {
   display: flex;
@@ -102,7 +89,50 @@ h3 {
   border-radius: 10px;
   padding: 1rem;
   background-color: #fff;
-  width: 100vh
+  width: 100vh;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.message {
+  max-width: 70%;
+  word-break: break-word;
+  margin-bottom: 10px;
+}
+
+.message.sent {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+  text-align: right;
+}
+
+.message.received {
+  align-self: flex-start;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.date-time {
+  font-size: 0.7em;
+  display: block;
+  text-align: right;
+}
+
+.message.received .date-time {
+  text-align: left;
 }
 
 .header {
@@ -122,28 +152,9 @@ h3 {
   flex-direction: column;
 }
 
-.message {
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 10px;
-  max-width: 70%;
-}
-
-.message.sent {
-  align-self: flex-end;
-  background-color: #007bff;
-  color: #fff;
-}
-
-.message.received {
-  align-self: flex-start;
-  background-color: #e0e0e0;
-}
-
 .input-area {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 0.5rem;
 }
-
