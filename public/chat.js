@@ -16,7 +16,6 @@ function createMessage({ text, userSender: { username: senderUsername }, created
   <div class="message ${messageClass}">
     <label class="form-label">
         <strong>${senderUsername}: </strong> <span>${text}</span> 
-        <span class="date-time">${dayjs(created_at).format("DD/MM HH:mm")}</span>
     </label>
   </div>
   `;

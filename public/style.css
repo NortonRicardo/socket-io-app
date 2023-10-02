@@ -125,16 +125,6 @@ h3 {
   position: relative;
 }
 
-.date-time {
-  font-size: 0.7em;
-  display: block;
-  text-align: right;
-}
-
-.message.received .date-time {
-  text-align: left;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
